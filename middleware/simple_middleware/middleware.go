@@ -1,4 +1,4 @@
-package simple_middleware
+package simple_middleware //nolint:revive,stylecheck
 
 import (
 	"net/http"
