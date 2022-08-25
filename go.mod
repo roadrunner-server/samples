@@ -2,7 +2,7 @@ module github.com/roadrunner-server/samples
 
 go 1.18
 
-require go.uber.org/zap v1.22.0
+require go.uber.org/zap v1.23.0
 
 require (
 	go.uber.org/atomic v1.7.0 // indirect
