@@ -6,6 +6,8 @@ import (
 	"go.uber.org/zap"
 )
 
+const name = "foo"
+
 type Plugin struct {
 	log *zap.Logger
 }
@@ -22,4 +24,8 @@ func (p *Plugin) Middleware(next http.Handler) http.Handler {
 		p.log.Info("i'm here")
 		next.ServeHTTP(w, r)
 	})
+}
+
+func (p *Plugin) Name() string {
+	return name
 }
