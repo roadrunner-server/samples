@@ -33,6 +33,10 @@ func (p *Plugin) Init(logger Logger, cfg Configurer) error {
 	return nil
 }
 
+func (p *Plugin) Weight() uint {
+	return 1
+}
+
 // Middleware is a special interface which after registration, RR will find automatically and add it to the http chain
 func (p *Plugin) Middleware(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {

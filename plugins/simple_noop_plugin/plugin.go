@@ -3,6 +3,7 @@ package simple_noop_plugin //nolint:revive,stylecheck
 import (
 	"context"
 
+	"github.com/roadrunner-server/endure/v2/dep"
 	"go.uber.org/zap"
 )
 
@@ -22,6 +23,7 @@ type Logger interface {
 type Plugin struct {
 	log *zap.Logger
 	cfg Configurer
+	myF F
 }
 
 // Init .. Logger and Configurer interfaces represents logger and configurer plugins.
@@ -41,6 +43,28 @@ func (p *Plugin) Serve() chan error {
 	*/
 
 	return errCh
+}
+
+func (p *Plugin) FooBar() string {
+	return "foobar"
+}
+
+func (p *Plugin) Weight() uint {
+	return 100
+}
+
+type F interface {
+	FooBar() string
+}
+
+// Collects all plugins which implement Name + RPCer interfaces
+func (s *Plugin) Collects() []*dep.In {
+	return []*dep.In{
+		dep.Fits(func(p any) {
+			pp := p.(F)
+			s.myF = pp
+		}, (*F)(nil)),
+	}
 }
 
 // Stop would be called on the RR stop.
