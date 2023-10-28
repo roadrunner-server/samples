@@ -58,11 +58,11 @@ type F interface {
 }
 
 // Collects all plugins which implement Name + RPCer interfaces
-func (s *Plugin) Collects() []*dep.In {
+func (p *Plugin) Collects() []*dep.In {
 	return []*dep.In{
-		dep.Fits(func(p any) {
-			pp := p.(F)
-			s.myF = pp
+		dep.Fits(func(plugin any) {
+			pp := plugin.(F)
+			p.myF = pp
 		}, (*F)(nil)),
 	}
 }
