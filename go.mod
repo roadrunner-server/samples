@@ -1,11 +1,8 @@
 module github.com/roadrunner-server/samples
 
 go 1.21
-
-toolchain go1.21.1
-
 require (
-	github.com/roadrunner-server/endure/v2 v2.4.3
+	github.com/roadrunner-server/endure/v2 v2.4.4
 	go.uber.org/zap v1.27.0
 )
 
