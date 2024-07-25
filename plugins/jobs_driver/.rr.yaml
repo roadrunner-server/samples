@@ -1,0 +1,34 @@
+version: '3'
+
+rpc:
+  listen: tcp://127.0.0.1:6001
+
+server:
+  command: "php your_php_worker.php"
+  relay: "pipes"
+  relay_timeout: "20s"
+
+your_global_section:
+  addr: "some_connection_string"
+
+logs:
+  level: error
+  encoding: console
+  mode: development
+
+jobs:
+  pool:
+    num_workers: 10
+    allocate_timeout: 60s
+    destroy_timeout: 1s
+
+  pipelines:
+    test-1:
+      driver: my_awesome_driver
+      config:
+        priority: 1
+        prefetch: 100
+        # rest of the options
+
+  consume: [ "test-1" ]
+
