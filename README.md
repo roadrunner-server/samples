@@ -1,2 +1,2 @@
-# samples
-RR2 plugins samples
+# Plugin Samples
+RoadRunner plugins/middleware examples repository.
