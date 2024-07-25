@@ -65,7 +65,6 @@ linters: # All available linters list: <https://golangci-lint.run/usage/linters/
     - typecheck # Like the front-end of a Go compiler, parses and type-checks Go code
     - unconvert # Remove unnecessary type conversions
     - unparam # Reports unused function parameters
-    - unused # Checks Go code for unused constants, variables, functions and types
     - whitespace # Tool for detection of leading and trailing whitespace
 
 issues:
