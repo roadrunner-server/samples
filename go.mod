@@ -2,7 +2,7 @@ module github.com/roadrunner-server/samples
 
 go 1.25
 
-toolchain go1.25.1
+toolchain go1.25.2
 
 require (
 	github.com/roadrunner-server/api/v4 v4.22.1
