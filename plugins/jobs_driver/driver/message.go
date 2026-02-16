@@ -1,4 +1,4 @@
-package driver
+package driver //nolint:revive,nolintlint
 
 import (
 	"encoding/json"

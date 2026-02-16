@@ -1,4 +1,5 @@
-package driver
+// Package driver contains a sample implementation of a RoadRunner jobs driver.
+package driver //nolint:revive,nolintlint
 
 import (
 	"context"
