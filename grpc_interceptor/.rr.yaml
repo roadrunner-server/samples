@@ -1,0 +1,9 @@
+version: "3"
+server:
+  command: "php grpc-worker.php"
+grpc:
+  listen: "tcp://127.0.0.1:9001"
+  proto:
+    - "proto/helloworld.proto"
+  interceptors:
+    - "sample-grpc-interceptor"
