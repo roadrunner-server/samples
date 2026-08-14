@@ -1,5 +1,5 @@
 // Package simple_noop_plugin demonstrates a minimal no-op RoadRunner plugin.
-package simple_noop_plugin //nolint:revive
+package simple_noop_plugin
 
 import (
 	"context"

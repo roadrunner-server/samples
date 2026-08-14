@@ -1,5 +1,5 @@
 // Package jobs_driver demonstrates how to register a custom RoadRunner jobs driver.
-package jobs_driver //nolint:revive
+package jobs_driver
 
 import (
 	"github.com/roadrunner-server/api/v4/plugins/v4/jobs"

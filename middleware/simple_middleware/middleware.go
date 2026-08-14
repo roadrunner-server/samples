@@ -1,5 +1,5 @@
 // Package simple_middleware demonstrates a custom RoadRunner HTTP middleware plugin.
-package simple_middleware //nolint:revive
+package simple_middleware
 
 import (
 	"net/http"
