@@ -2,21 +2,21 @@ module github.com/roadrunner-server/samples
 
 go 1.27
 
-toolchain go1.27.1
+toolchain go1.27.2
 
 require (
 	github.com/roadrunner-server/api/v4 v4.24.0
-	github.com/roadrunner-server/endure/v2 v2.6.2
-	github.com/roadrunner-server/errors v1.5.0
+	github.com/roadrunner-server/endure/v2 v2.7.0
+	github.com/roadrunner-server/errors v1.6.0
 	go.uber.org/zap v1.28.0
 	google.golang.org/grpc v1.84.0
 )
 
 require (
 	go.uber.org/multierr v1.11.0 // indirect
-	golang.org/x/net v0.59.0 // indirect
-	golang.org/x/sys v0.48.0 // indirect
-	golang.org/x/text v0.42.0 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20261005182115-fad411399dd8 // indirect
+	golang.org/x/net v0.61.0 // indirect
+	golang.org/x/sys v0.49.0 // indirect
+	golang.org/x/text v0.43.0 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20261012220534-4341edf3f941 // indirect
 	google.golang.org/protobuf v1.36.12 // indirect
 )
